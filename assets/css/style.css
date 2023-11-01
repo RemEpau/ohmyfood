@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  background: rgb(45, 45, 45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  color: red;
+}
+header + main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header + main h2 {
+  color: blue;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+footer h2 {
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
