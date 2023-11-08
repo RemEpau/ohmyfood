@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: loader 4s ease forwards;
+  animation: loader 4s ease 725ms forwards;
 
   &__text {
     font-family: "Shrikhand", "cursive";
@@ -20,7 +20,11 @@
     -webkit-background-clip: text;
     color: transparent;
     z-index: 2;
-    animation: loader__text 4s ease forwards;
+    animation: loader__text 4s ease 725ms forwards;
+
+    @media (min-width:768px) {
+      font-size: 5vw;
+    }
   }
 }
 

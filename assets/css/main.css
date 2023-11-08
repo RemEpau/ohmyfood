@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 @keyframes loader {
   80% {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  90% {
+    background-color: rgba(255, 255, 255, 0);
     transform: translateX(0);
   }
   to {
+    background-color: rgba(255, 255, 255, 0);
     transform: translateX(-100%);
   }
 }
@@ -99,7 +104,7 @@ a {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: loader 4s ease forwards;
+  animation: loader 4s ease 725ms forwards;
 }
 .loader__text {
   font-family: "Shrikhand", "cursive";
@@ -111,7 +116,12 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   z-index: 2;
-  animation: loader__text 4s ease forwards;
+  animation: loader__text 4s ease 725ms forwards;
+}
+@media (min-width: 768px) {
+  .loader__text {
+    font-size: 5vw;
+  }
 }
 
 .local {
