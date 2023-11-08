@@ -28,23 +28,23 @@
           Réservez le menu qui<br>vous convient
         </h2>
         <p class="hero__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins </p>
-        <a class="hero__btn">Explorer nos restaurants </a>
+        <a class="hero__btn" href="#restaurants">Explorer nos restaurants </a>
       </section>
 
-      <section class="fonctionnement">
+      <section class="how">
         <div class="container">
-          <h2 class="fonctionnement__title">Fonctionnement</h2>
-          <ol class="fonctionnement__steps">
-            <li class="fonctionnement__step">
-              <i class="fa-mobile-alt fas fonctionnement__icon"></i>
+          <h2 class="how__title">Fonctionnement</h2>
+          <ol class="how__steps">
+            <li class="how__step">
+              <i class="fa-mobile-alt fas how__icon"></i>
               <span class="text">Choisissez un restaurant</span>
             </li>
-            <li class="fonctionnement__step">
-              <i class="fa-list-ul fas fonctionnement__icon"></i>
+            <li class="how__step">
+              <i class="fa-list-ul fas how__icon"></i>
               <span class="text">Composez votre menu</span>
             </li>
-            <li class="fonctionnement__step">
-              <i class="fa-store fas fonctionnement__icon"></i>
+            <li class="how__step">
+              <i class="fa-store fas how__icon"></i>
               <span class="text">Dégustez au restaurant</span>
             </li>
           </ol>
@@ -55,62 +55,56 @@
         <div class="container">
           <h2 class="restaurants__title">Restaurants</h2>
           <div class="cards">
-            <a class='card' href='/la-palette-du-gout'>
-              <img src="./assets/images/restaurants/jay-wennington.jpg" alt="" class="card__img">
-              <span class="card__new">Nouveau</span>
-              <footer class="card__footer">
+
+            <div class="card">
+              <a href="#">
+                <p class="card__new">Nouveau</p>
+                <img class="card__img" src="./assets/images/restaurants/jay-wennington.jpg"
+                     alt="Photo: La palette du goût">
                 <div class="card__content">
                   <h3 class="card__title">La palette du goût</h3>
-                  <span class="card__subtitle">Ménilmontant</span>
+                  <p class="card__descr">Ménilmontant</p>
                 </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like fa-2x fa-heart far menu__like menu__like--noBg"></i>
-                  <i class="card__like fa-2x fa-heart fas menu__like menu__like--bg"></i>
-                </div>
-              </footer>
-            </a>
-            <a class='card' href='/la-note-enchantee'>
-              <img src="./assets/images/restaurants/stil.jpg" alt="" class="card__img">
-              <span class="card__new">Nouveau</span>
-              <footer class="card__footer">
+              </a>
+              <button class="fas fa-heart" type="button"></button>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img class="card__img" src="./assets/images/restaurants/stil.jpg" alt="Photo: La note enchantée">
+                <p class="card__new">Nouveau</p>
                 <div class="card__content">
                   <h3 class="card__title">La note enchantée</h3>
-                  <span class="card__subtitle">Charonne</span>
+                  <p class="card__descr">Charonne</p>
                 </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like fa-2x fa-heart far menu__like menu__like--noBg"></i>
-                  <i class="card__like fa-2x fa-heart fas menu__like menu__like--bg"></i>
-                </div>
-              </footer>
-            </a>
-            <a class='card' href='/a-la-francaise'>
-              <img src="./assets/images/restaurants/toa-heftiba.jpg" alt="" class="card__img">
-              <footer class="card__footer">
+              </a>
+              <button class="fas fa-heart fa-heart--active" type="button"></button>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img class="card__img" src="./assets/images/restaurants/toa-heftiba.jpg" alt="Photo: À la française">
                 <div class="card__content">
                   <h3 class="card__title">À la française</h3>
-                  <span class="card__subtitle">Cité Rouge</span>
+                  <p class="card__descr">Cité Rouge</p>
                 </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like fa-2x fa-heart far menu__like menu__like--noBg"></i>
-                  <i class="card__like fa-2x fa-heart fas menu__like menu__like--bg"></i>
-                </div>
-              </footer>
-            </a>
-            <a class='card' href='/le-delice-des-sens'>
-              <img src="./assets/images/restaurants/louis-hansel.jpg" alt="" class="card__img">
-              <footer class="card__footer">
+              </a>
+              <button class="fas fa-heart" type="button"></button>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img class="card__img" src="./assets/images/restaurants/louis-hansel.jpg"
+                     alt="Photo: Le délice des sens">
                 <div class="card__content">
                   <h3 class="card__title">Le délice des sens</h3>
-                  <span class="card__subtitle">Folie-Méricourt</span>
+                  <p class="card__descr">Folie-Méricourt</p>
                 </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like fa-2x fa-heart far menu__like menu__like--noBg"></i>
-                  <i class="card__like fa-2x fa-heart fas menu__like menu__like--bg"></i>
-                </div>
-              </footer>
-            </a>
+              </a>
+              <button class="fas fa-heart" type="button"></button>
+            </div>
+
           </div>
-        </div>
       </section>
 
     </main>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 @keyframes loader {
   80% {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
   }
   90% {
     background-color: rgba(255, 255, 255, 0);
@@ -28,11 +28,6 @@ html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .container {
@@ -96,15 +91,15 @@ a {
 
 .loader {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
-  height: 100%;
-  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vw;
   z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: loader 4s ease 725ms forwards;
+  animation: loader 4s ease-in-out 725ms forwards;
 }
 .loader__text {
   font-family: "Shrikhand", "cursive";
@@ -113,9 +108,8 @@ a {
   background-size: 300% 300%;
   background-repeat: no-repeat;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
-  z-index: 2;
+  -webkit-background-clip: text;
   animation: loader__text 4s ease 725ms forwards;
 }
 @media (min-width: 768px) {
@@ -144,9 +138,6 @@ a {
   text-align: center;
   background-color: rgb(250, 250, 250);
 }
-.hero__title {
-  margin: 0;
-}
 .hero__subtitle {
   font-weight: 300;
   margin: 1.5rem 0;
@@ -154,6 +145,7 @@ a {
 .hero__btn {
   border: 0;
   padding: 0.75rem 1.5rem;
+  font-family: "Roboto", "sans-serif";
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
@@ -174,24 +166,24 @@ a {
   color: inherit;
 }
 
-.fonctionnement {
+.how {
   padding: 2rem 1rem;
 }
-.fonctionnement__title {
-  margin-top: 0;
+.how__title {
+  margin-bottom: 1rem;
 }
-.fonctionnement__steps {
+.how__steps {
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: compteListe;
 }
 @media (min-width: 64rem) {
-  .fonctionnement__steps {
+  .how__steps {
     display: flex;
   }
 }
-.fonctionnement__step {
+.how__step {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
@@ -201,22 +193,22 @@ a {
   position: relative;
 }
 @media (min-width: 64rem) {
-  .fonctionnement__step {
+  .how__step {
     flex: 1;
     margin: 0;
     margin-left: 2rem;
   }
-  .fonctionnement__step:first-child {
+  .how__step:first-child {
     margin-left: 0.75rem;
   }
 }
-.fonctionnement__step:first-child {
+.how__step:first-child {
   margin-top: 0;
 }
-.fonctionnement__step:last-child {
+.how__step:last-child {
   margin-bottom: 0;
 }
-.fonctionnement__step::before {
+.how__step::before {
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9356DC;
@@ -230,7 +222,7 @@ a {
   position: absolute;
   left: -0.75rem;
 }
-.fonctionnement__icon {
+.how__icon {
   margin-right: 1rem;
   color: #7e7e7e;
 }
@@ -238,6 +230,9 @@ a {
 .restaurants {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
+}
+.restaurants__title {
+  margin-bottom: 1rem;
 }
 
 .cards {
@@ -253,58 +248,141 @@ a {
 }
 
 .card {
-  background-color: white;
-  border-radius: 1rem;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  border-radius: 1rem;
+  background-color: #fff;
 }
 .card__img {
-  height: 12rem;
   width: 100%;
-  border: transparent solid 0px;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: none;
+  height: 170px;
   object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 .card__new {
-  background-color: #99E2D0;
-  color: #1b6150;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  content: attr(title);
+  display: block;
   position: absolute;
-  top: 1rem;
-  right: 0.75rem;
-}
-.card__footer {
-  padding: 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
+  right: 10px;
+  top: 10px;
+  padding: 0.45em 0.9em;
+  border-radius: 0.2rem;
+  background-color: #99e2d0;
+  color: #2c9c81;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 .card__content {
-  flex: 1;
+  padding: 1rem;
 }
 .card__title {
-  margin: 0;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
-.card__subtitle {
-  margin: 0;
+.card__descr {
+  font-size: 1.1em;
+  font-weight: 300;
 }
-.card__btn {
-  height: 2rem;
-  width: 2rem;
+.card .fa-heart {
+  position: absolute;
+  bottom: 30px;
+  right: 18px;
+  font-size: 1.4em;
+  border: none;
+  color: transparent;
   background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-text-stroke: 1px black;
+  transform: scale(1);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
-.card__like {
-  background-color: white !important;
+.card .fa-heart:active, .card .fa-heart:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-image: -o-linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  transform: scale(1.2);
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
