@@ -82,7 +82,7 @@ li {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: loader 5s ease forwards;
+  animation: loader 4s ease forwards;
 
   .logo {
     font-size: 13vw;
@@ -92,7 +92,7 @@ li {
     background-clip: text;
     color: transparent;
     z-index: 2;
-    animation: loader__text 5s ease forwards;
+    animation: loader__text 4s ease forwards;
     -webkit-background-clip: text;
   }
 }
