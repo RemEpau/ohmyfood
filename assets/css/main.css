@@ -104,12 +104,13 @@ html {
 .loader__text {
   font-family: "Shrikhand", "cursive";
   font-size: 10vw;
+  padding: 10px;
   background-image: url(../../assets/images/loader/Background.svg);
   background-size: 300% 300%;
   background-repeat: no-repeat;
   background-clip: text;
-  color: transparent;
   -webkit-background-clip: text;
+  color: transparent;
   animation: loader__text 4s ease 725ms forwards;
 }
 @media (min-width: 768px) {
