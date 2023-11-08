@@ -12,6 +12,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: #f6f6f6;
 }
 
 a {
@@ -19,13 +20,9 @@ a {
   color: inherit;
 }
 
-.fa-regular {
-  color: black;
-}
-
-.fa-solid {
-  color: #9356DC;
-  opacity: 0%;
+h1 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 h4 {
@@ -42,15 +39,30 @@ section {
   padding: 54px 17px;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 .logo {
   font-family: "Shrikhand";
   font-size: 30px;
   padding: 10px;
 }
 
+.btn {
+  color: white;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 /*** Loader ***/
 .loader {
-  position: absolute;
+  position: fixed;
   background-color: white;
   height: 100%;
   width: 100%;
@@ -59,20 +71,18 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: loader 3.5s ease-in-out forwards;
+  animation: loader 5s ease forwards;
 }
 .loader .logo {
-  position: relative;
-  font-size: 3em;
+  font-size: 13vw;
+  background-image: url(../../assets/images/loader/Background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: text;
   color: transparent;
-}
-.loader .logo::before {
-  content: attr(data-text);
-  position: absolute;
-  color: #9356DC;
-  width: 0%;
-  overflow: hidden;
-  animation: loader__text 3s ease-in-out;
+  z-index: 2;
+  animation: loader__text 5s ease forwards;
+  -webkit-background-clip: text;
 }
 
 @keyframes loader {
@@ -85,18 +95,13 @@ section {
 }
 @keyframes loader__text {
   from {
-    width: 0;
+    background-position: -100%;
   }
-  40% {
-    color: #9356DC;
-  }
-  70%, 80% {
-    color: black;
-    width: 100%;
+  30%, 70% {
+    background-position: 50%;
   }
   to {
-    color: black;
-    width: 0;
+    background-position: 200%;
   }
 }
 /*** Header ***/
@@ -105,14 +110,24 @@ header {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 /*** Hero ***/
-/*** Fonctionnement ***/
-/*** Restaurants ***/
-#restaurants {
-  background-color: #f6f6f6;
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
 }
+
+/*** Fonctionnement ***/
+#fonctionnement {
+  background-color: white;
+}
+
+/*** Restaurants ***/
 #restaurants h2 {
   padding-bottom: 15px;
 }
@@ -147,6 +162,13 @@ header {
   width: 30px;
   height: 30px;
 }
+#restaurants .container .card__description--heart .fa-solid {
+  color: #9356DC;
+  opacity: 0%;
+}
+#restaurants .container .card__description--heart .fa-regular {
+  color: black;
+}
 #restaurants .container .card__description--heart i {
   position: absolute;
   font-size: 25px;
@@ -164,6 +186,31 @@ header {
   padding: 13px;
 }
 
-/*** Animation ***/
+/*** Footer ***/
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 20px 20px;
+  font-weight: 300;
+}
+footer .logo {
+  font-weight: lighter;
+  font-size: 18px;
+  padding: 0;
+  padding-bottom: 15px;
+}
+footer ul a {
+  width: 100%;
+  padding: 0.25rem 0;
+}
+footer ul li {
+  display: flex;
+  align-items: center;
+}
+footer ul li i {
+  text-align: left;
+  color: white !important;
+  width: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */
