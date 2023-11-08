@@ -1,0 +1,25 @@
+@keyframes loader {
+  80% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loader__text {
+
+  from {
+    background-position: -100%;
+  }
+
+  30%,
+  70% {
+    background-position: 50%;
+  }
+
+  to {
+    background-position: 200%;
+  }
+}
