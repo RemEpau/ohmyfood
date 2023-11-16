@@ -1,0 +1,184 @@
+.header {
+  &--back {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: black;
+  }
+}
+
+.heroImg {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: $bg-clr;
+  z-index: 1;
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0 1rem;
+
+    @media (min-width:$media-minw) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--title {
+      font-family: 'Shrikhand';
+      padding: 1rem 0 2rem 0;
+    }
+
+    .fa-heart {
+      @include heart(menu);
+    }
+  }
+}
+
+.choices {
+  margin: 0 1rem;
+  display: grid;
+  border: none;
+
+  button {
+    @include button(primary);
+    padding: auto;
+  }
+
+  @media (min-width:$media-minw) {
+    margin: 0 15%;
+  }
+}
+
+.choice {
+  max-width: 100%;
+  overflow: hidden;
+
+  &__title {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background-color: $tertiary-clr;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.item {
+  background-color: white;
+  min-height: 2rem;
+  white-space: wrap;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemShow 400ms cubic-bezier(0, 0, 0.3, 1) both;
+  transform: scale(0);
+  opacity: 0;
+  max-width: 100%;
+
+  &__header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__confirmation {
+    background-color: $tertiary-clr;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+
+    &--wrapicon {
+      height: 1.5rem;
+      aspect-ratio: 1;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      transform: rotate(180deg);
+      transition-duration: 500ms;
+    }
+
+    &--icon {
+      color: $tertiary-clr;
+    }
+  }
+
+  &:hover &__confirmation,
+  &:active &__confirmation {
+    margin-right: -1rem;
+
+    &--wrapicon {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@for $i from 0 to 10 {
+  .delay-#{$i} {
+    animation-delay: #{calc($i * 75)}ms;
+  }
+}
+
+.wrapBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 3rem 0;
+}
